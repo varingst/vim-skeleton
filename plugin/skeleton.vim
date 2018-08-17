@@ -9,8 +9,8 @@ let g:loaded_skeleton = 1
 ""
 " @section Introduction, intro
 " @stylized Skeleton
-" @plugin(stylized) initializes new Vim buffers with file-type-specific
-" templates.
+" @plugin(stylized) initializes new Vim buffers with filename and
+" file-type-specific templates.
 "
 " Add something like the following to ~/.vim/templates/skel.xml:
 " >
@@ -27,6 +27,18 @@ let g:loaded_skeleton = 1
 "       [cursor is here]
 "   </books>
 " <
+"
+" Add something like the following to ~/.vim/templates/jsconfig.json
+" >
+"   {
+"     "compilerOptions": {
+"       "checkJs": true
+"     }
+"   }
+" <
+" And when you create a new buffer jsconfig.json, it will be initialized with
+" your template.
+"
 " It differs from a snippet plug-in in that it is concerned with initializing
 " new buffers with boilerplate text without any manual intervention such as
 " triggering a snippet.

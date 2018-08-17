@@ -82,6 +82,12 @@ describe 'skeleton#Load'
     Expect g:skeleton_called_ruby_template_func == 1
   end
 
+  it 'reads a custom template based on exact name if possible'
+    Expect filereadable(g:skeleton_template_dir.'/exact.txt') == 1
+    call skeleton#Load('', 'exact.txt', '')
+    Expect getline(1) ==# 'Exact template: exact.txt'
+  end
+
   it 'reads a custom template if possible'
     Expect filereadable(g:skeleton_template_dir.'/custom.txt') == 1
     call skeleton#Load('custom', 'test.txt', '')

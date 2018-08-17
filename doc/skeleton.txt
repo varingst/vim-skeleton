@@ -11,7 +11,8 @@ CONTENTS                                                   *skeleton-contents*
 ==============================================================================
 INTRODUCTION                                                  *skeleton-intro*
 
-Skeleton initializes new Vim buffers with file-type-specific templates.
+Skeleton initializes new Vim buffers with filename and file-type-specific
+templates.
 
 Add something like the following to ~/.vim/templates/skel.xml:
 >
@@ -28,6 +29,18 @@ your template:
       [cursor is here]
   </books>
 <
+
+Add something like the following to ~/.vim/templates/jsconfig.json
+>
+  {
+    "compilerOptions": {
+      "checkJs": true
+    }
+  }
+<
+And when you create a new buffer jsconfig.json, it will be initialized with
+your template.
+
 It differs from a snippet plug-in in that it is concerned with initializing
 new buffers with boilerplate text without any manual intervention such as
 triggering a snippet.
